@@ -1,0 +1,26 @@
+{
+  "name": "casadados_plus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc -w",
+    "start": "node build/cli.js",
+    "package": "pkg . --targets node16-linux-x64 --output executable/hello"
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.10",
+    "@types/yargs": "^17.0.2",
+    "pkg": "^5.3.1",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "yargs": "^17.1.1"
+  },
+  "pkg": {
+    "scripts": "build/**/*.js"
+  },
+  "bin": {
+    "casadados_plus": "./build/cli.js"
+  }
+}
